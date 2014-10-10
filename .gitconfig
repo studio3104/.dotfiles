@@ -1,0 +1,7 @@
+[user]
+name = studio3104
+email = studio3104.com@gmail.com
+[core]
+excludesfile = ~/.gitignore_global
+[color]
+diff = auto
