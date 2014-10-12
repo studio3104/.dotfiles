@@ -117,9 +117,6 @@ endif
 " Required:
 call neobundle#end()
 
-" Required:
-filetype plugin indent on
-
 " development------------------------------
 " Ruby
 NeoBundle 'alpaca-tc/vim-endwise.git'
@@ -143,3 +140,5 @@ endif
 
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
+
+filetype plugin indent on
