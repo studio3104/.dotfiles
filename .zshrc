@@ -11,9 +11,9 @@ case ${OSTYPE} in
     ;;
   linux*)
     # setting for linux
+    ZSH_THEME="robbyrussell"
     ;;
   *)
-    ZSH_THEME="robbyrussell"
     # else
 esac
 
