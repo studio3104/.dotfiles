@@ -123,6 +123,9 @@ NeoBundle 'alpaca-tc/vim-endwise.git'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'ngmy/vim-rubocop'
 " END Ruby
+" coffee-script
+NeoBundle 'kchmck/vim-coffee-script'
+" END coffee-script
 
 " syntastic------------------------------------
 NeoBundle 'scrooloose/syntastic'
