@@ -122,10 +122,12 @@ call neobundle#end()
 NeoBundle 'alpaca-tc/vim-endwise.git'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'ngmy/vim-rubocop'
-" END Ruby
+
 " coffee-script
 NeoBundle 'kchmck/vim-coffee-script'
-" END coffee-script
+
+" markdown
+NeoBundle 'plasticboy/vim-markdown'
 
 " syntastic------------------------------------
 NeoBundle 'scrooloose/syntastic'
