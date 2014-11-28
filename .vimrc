@@ -129,6 +129,12 @@ NeoBundle 'kchmck/vim-coffee-script'
 " markdown
 NeoBundle 'plasticboy/vim-markdown'
 
+" Go
+if $GOROOT != ''
+  set rtp+=$GOROOT/misc/vim
+endif
+NeoBundle 'vim-jp/vim-go-extra'
+
 " syntastic------------------------------------
 NeoBundle 'scrooloose/syntastic'
 " Perl
