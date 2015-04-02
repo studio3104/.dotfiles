@@ -5,7 +5,7 @@ autocmd BufNewFile *.go 0r ${HOME}/.dotfiles/vimrc/.go
 map <F4>  :w !perl<CR>
 map <F5>  :w !go run %<CR>
 map <F6>  :w !ruby<CR>
-map <F7>  :w !rspec %<CR>
+map <F7>  :w !python<CR>
 
 " Delete に Backspace の仕事させる
 map  
