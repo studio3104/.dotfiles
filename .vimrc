@@ -118,6 +118,8 @@ endif
 call neobundle#end()
 
 " development------------------------------
+NeoBundle 'Yggdroot/indentLine' " visible indent
+
 " Ruby
 NeoBundle 'alpaca-tc/vim-endwise.git'
 NeoBundle 'slim-template/vim-slim'
@@ -134,9 +136,6 @@ if $GOROOT != ''
   set rtp+=$GOROOT/misc/vim
 endif
 NeoBundle 'vim-jp/vim-go-extra'
-
-" Python
-NeoBundle 'Yggdroot/indentLine' " visible indent
 
 " syntastic------------------------------------
 NeoBundle 'scrooloose/syntastic'
