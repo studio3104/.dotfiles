@@ -135,6 +135,9 @@ if $GOROOT != ''
 endif
 NeoBundle 'vim-jp/vim-go-extra'
 
+" Python
+NeoBundle 'Yggdroot/indentLine' " visible indent
+
 " syntastic------------------------------------
 NeoBundle 'scrooloose/syntastic'
 " Perl
