@@ -2,6 +2,7 @@ autocmd BufNewFile *.pl 0r ${HOME}/.dotfiles/vimrc/.pl
 autocmd BufNewFile *.sh 0r ${HOME}/.dotfiles/vimrc/.sh
 autocmd BufNewFile *.rb 0r ${HOME}/.dotfiles/vimrc/.rb
 autocmd BufNewFile *.go 0r ${HOME}/.dotfiles/vimrc/.go
+autocmd BufNewFile *.py 0r ${HOME}/.dotfiles/vimrc/.py
 map <F4>  :w !perl<CR>
 map <F5>  :w !go run %<CR>
 map <F6>  :w !ruby<CR>
