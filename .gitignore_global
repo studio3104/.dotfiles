@@ -40,3 +40,6 @@ Thumbs.db
 # vim hogehoge #
 ################
 .*.sw*
+
+# vagrant
+.vagrant
