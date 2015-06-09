@@ -49,3 +49,6 @@ Thumbs.db
 # python project hogehoge #
 # #########################
 .python-version
+
+# intelliJ
+*.iml
