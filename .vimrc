@@ -63,6 +63,10 @@ set hlsearch
 " 見えない文字を可視化
 set list
 
+" Whitespaces
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   set nocompatible               " Be iMproved
@@ -137,6 +141,10 @@ if $GOROOT != ''
   set rtp+=$GOROOT/misc/vim
 endif
 NeoBundle 'vim-jp/vim-go-extra'
+
+" Python
+NeoBundle 'nvie/vim-flake8'
+autocmd FileType python map <buffer> <F8> :call Flake8()<CR>
 
 " syntastic------------------------------------
 NeoBundle 'scrooloose/syntastic'
