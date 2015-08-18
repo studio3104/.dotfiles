@@ -8,6 +8,7 @@ case ${OSTYPE} in
   darwin*)
     # setting for mac
     ZSH_THEME="wedisagree"
+    source `brew --prefix`/etc/profile.d/z.sh
     ;;
   linux*)
     # setting for linux
