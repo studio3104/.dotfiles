@@ -5,3 +5,5 @@ email = studio3104.com@gmail.com
 excludesfile = ~/.gitignore_global
 [color]
 diff = auto
+[ghq]
+root = ~/src

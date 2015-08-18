@@ -99,3 +99,4 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 for f (~/.zsh/peco-sources/*) source "${f}" # load peco sources
 bindkey '^r' peco-select-history
 bindkey '^f' peco-z
+bindkey '^]' peco-ghq-list-cd
