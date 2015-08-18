@@ -100,3 +100,4 @@ for f (~/.zsh/peco-sources/*) source "${f}" # load peco sources
 bindkey '^r' peco-select-history
 bindkey '^f' peco-z
 bindkey '^]' peco-ghq-list-cd
+bindkey '^t' peco-tree-vim
