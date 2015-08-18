@@ -1,6 +1,6 @@
 function peco-tree-vim(){
   local selected_file=$(tree -a -i -f --noreport | peco --query "$LBUFFER")
-  if [ -f ${selected_file} ]; then
+  if [ -n "${selected_file}" ]; then
       BUFFER="vim ${selected_file}"
       zle accept-line
   fi
