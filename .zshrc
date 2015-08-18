@@ -94,3 +94,8 @@ source $ZSH/oh-my-zsh.sh
 
 # visible git status for tmux-powerline
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+# setting for peco
+for f (~/.zsh/peco-sources/*) source "${f}" # load peco sources
+bindkey '^r' peco-select-history
+bindkey '^f' peco-z
