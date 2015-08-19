@@ -8,7 +8,6 @@ case ${OSTYPE} in
   darwin*)
     # setting for mac
     ZSH_THEME="wedisagree"
-    source `brew --prefix`/etc/profile.d/z.sh
     ;;
   linux*)
     # setting for linux
@@ -95,9 +94,13 @@ source $ZSH/oh-my-zsh.sh
 # visible git status for tmux-powerline
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+# cdr
+autoload -Uz add-zsh-hock
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+
 # setting for peco
 for f (~/.zsh/peco-sources/*) source "${f}" # load peco sources
 bindkey '^r' peco-select-history
-bindkey '^f' peco-z
+bindkey '^f' peco-cdr
 bindkey '^]' peco-ghq-list-cd
 bindkey '^t' peco-tree-vim
