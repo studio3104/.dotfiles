@@ -104,4 +104,4 @@ bindkey '^r' peco-select-history
 bindkey '^f' peco-cdr
 bindkey '^]' peco-ghq-list-cd
 bindkey '^t' peco-tree-vim
-bindkey '^y' peco-tree-cd
+bindkey '^g' peco-tree-cd
