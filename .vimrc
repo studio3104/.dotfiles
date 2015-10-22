@@ -96,6 +96,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'airblade/vim-gitgutter'
 
 " neosnippet settings
 NeoBundle 'Shougo/neosnippet.vim'
