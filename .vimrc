@@ -67,7 +67,6 @@ set list
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
-"NeoBundle Scripts-----------------------------
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
@@ -75,11 +74,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
 call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
@@ -90,18 +85,40 @@ NeoBundle 'Shougo/vimproc', {
   \    },
   \ }
 
-" Add or remove your Bundles here:
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'airblade/vim-gitgutter'
-
-" neosnippet settings
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-" Plugin key-mappings.
+NeoBundle 'cespare/vim-toml'
+NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'scrooloose/syntastic'
+" NeoBundle 'Yggdroot/indentLine' " visible indent
+
+" Ruby
+NeoBundle 'alpaca-tc/vim-endwise.git'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'ngmy/vim-rubocop'
+
+" coffee-script
+NeoBundle 'kchmck/vim-coffee-script'
+
+" markdown
+NeoBundle 'plasticboy/vim-markdown'
+
+" Go
+NeoBundle 'vim-jp/vim-go-extra'
+
+" Python
+NeoBundle 'nvie/vim-flake8'
+
+NeoBundleCheck
+call neobundle#end()
+
+" neosnippet settings
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
@@ -120,48 +137,20 @@ if has('conceal')
 endif
 " END neosnippet settins
 
-" Required:
-call neobundle#end()
-
-" development------------------------------
-" NeoBundle 'Yggdroot/indentLine' " visible indent
-
-" Ruby
-NeoBundle 'alpaca-tc/vim-endwise.git'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'ngmy/vim-rubocop'
-
-" coffee-script
-NeoBundle 'kchmck/vim-coffee-script'
-
-" markdown
-NeoBundle 'plasticboy/vim-markdown'
-
 " Go
 if $GOROOT != ''
   set rtp+=$GOROOT/misc/vim
 endif
-NeoBundle 'vim-jp/vim-go-extra'
 
 " Python
-NeoBundle 'nvie/vim-flake8'
 autocmd FileType python map <buffer> <F8> :call Flake8()<CR>
 
-" syntastic------------------------------------
-NeoBundle 'scrooloose/syntastic'
 " Perl
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
-" END syntastic--------------------------------
 
-NeoBundle 'cespare/vim-toml'
-NeoBundle 'AndrewRadev/switch.vim'
 if !exists('loaded_matchit')
   runtime macros/matchit.vim
 endif
-" END development--------------------------
-
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
 
 filetype plugin indent on
