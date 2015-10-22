@@ -123,7 +123,7 @@ endif
 call neobundle#end()
 
 " development------------------------------
-NeoBundle 'Yggdroot/indentLine' " visible indent
+" NeoBundle 'Yggdroot/indentLine' " visible indent
 
 " Ruby
 NeoBundle 'alpaca-tc/vim-endwise.git'
