@@ -3,7 +3,7 @@
 cwd=$(cd "$(dirname ${0})" && pwd)
 cd ${cwd}
 
-for file in .zshrc .gitconfig .gitignore_global .vimrc; do
+for file in .zshrc .zshenv .gitconfig .gitignore_global .vimrc; do
     echo ${file}
     if [ -f ~/${file} ]; then
         mv ~/${file} ~/${file}.org
