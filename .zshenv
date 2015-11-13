@@ -37,3 +37,8 @@ export PGDATA=/usr/local/var/postgres
 
 # docker
 eval "$(docker-machine env default)"
+
+# Java
+if [ -f /usr/libexec/java_home ] ; then
+  export JAVA_HOME=`/usr/libexec/java_home`
+fi
