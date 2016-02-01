@@ -115,6 +115,9 @@ NeoBundle 'vim-jp/vim-go-extra'
 " Python
 NeoBundle 'nvie/vim-flake8'
 
+" Scala
+NeoBundle 'derekwyatt/vim-scala'
+
 NeoBundleCheck
 call neobundle#end()
 
