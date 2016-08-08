@@ -1,3 +1,5 @@
+setopt no_global_rcs
+
 # git (self upgrade version)
 export PATH="/usr/local/git/bin:${PATH}"
 
@@ -42,3 +44,6 @@ eval "$(docker-machine env default)"
 if [ -f /usr/libexec/java_home ] ; then
   export JAVA_HOME=`/usr/libexec/java_home`
 fi
+
+# Ordinally PATHs
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin
