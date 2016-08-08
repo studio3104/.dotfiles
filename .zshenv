@@ -37,9 +37,6 @@ alias vim=/usr/local/Cellar/vim/7.4.430_1/bin/vim
 alias ip=~/.pyenv/shims/ipython
 export PGDATA=/usr/local/var/postgres
 
-# docker
-eval "$(docker-machine env default)"
-
 # Java
 if [ -f /usr/libexec/java_home ] ; then
   export JAVA_HOME=`/usr/libexec/java_home`
