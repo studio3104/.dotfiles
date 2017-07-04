@@ -21,6 +21,7 @@ if [ -d /usr/local/opt/go/libexec ] ; then
 fi
 
 alias ip=~/.pyenv/shims/ipython
+export PATH=/usr/local/bin:$PATH
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN || -z "${TMPDIR}" ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
