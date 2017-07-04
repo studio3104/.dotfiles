@@ -14,9 +14,9 @@ if [ -d ${HOME}/.pyenv  ] ; then
 fi
 
 # golang
-if [ -d /usr/local/go ] ; then
-  export GOROOT=/usr/local/go
-  export GOPATH=$HOME/go
+if [ -d /usr/local/opt/go/libexec ] ; then
+  export GOROOT=/usr/local/opt/go/libexec
+  export GOPATH=$HOME/.go
   export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 fi
 
