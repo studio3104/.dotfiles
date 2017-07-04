@@ -67,93 +67,31 @@ set list
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" BEGIN dein
+if &compatible
+  set nocompatible
 endif
 
-call neobundle#begin(expand('~/.vim/bundle'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-  \     'windows' : 'make -f make_mingw32.mak',
-  \     'cygwin' : 'make -f make_cygwin.mak',
-  \     'mac' : 'make -f make_mac.mak',
-  \     'unix' : 'make -f make_unix.mak',
-  \    },
-  \ }
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'cespare/vim-toml'
-NeoBundle 'AndrewRadev/switch.vim'
-NeoBundle 'scrooloose/syntastic'
-" NeoBundle 'Yggdroot/indentLine' " visible indent
+if dein#load_state('~/.vim/dein')
+  call dein#begin('~/.vim/dein')
 
-" Ruby
-NeoBundle 'alpaca-tc/vim-endwise.git'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'ngmy/vim-rubocop'
+  let g:rc_dir    = expand('~/.vim/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
-" coffee-script
-NeoBundle 'kchmck/vim-coffee-script'
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-" markdown
-NeoBundle 'plasticboy/vim-markdown'
-
-" Go
-NeoBundle 'vim-jp/vim-go-extra'
-
-" Python
-NeoBundle 'nvie/vim-flake8'
-
-" Scala
-NeoBundle 'derekwyatt/vim-scala'
-
-NeoBundleCheck
-call neobundle#end()
-
-" neosnippet settings
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-" END neosnippet settins
-
-" Go
-if $GOROOT != ''
-  set rtp+=$GOROOT/misc/vim
+  call dein#end()
+  call dein#save_state()
 endif
 
-" Python
-autocmd FileType python map <buffer> <F8> :call Flake8()<CR>
-
-" Perl
-let g:syntastic_enable_perl_checker = 1
-let g:syntastic_perl_checkers = ['perl', 'podchecker']
-
-if !exists('loaded_matchit')
-  runtime macros/matchit.vim
+if dein#check_install()
+  call dein#install()
 endif
+" END dein
 
 filetype plugin indent on
+syntax enable
