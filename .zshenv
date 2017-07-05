@@ -1,4 +1,6 @@
 setopt no_global_rcs
+export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # rbenv
 if [ -d ${HOME}/.rbenv  ] ; then
@@ -20,9 +22,7 @@ if [ -d /usr/local/opt/go/libexec ] ; then
   export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 fi
 
-alias ip=~/.pyenv/shims/ipython
-export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
+source ~/.aliases
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN || -z "${TMPDIR}" ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
