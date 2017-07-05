@@ -3,6 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+export LESS='-iMR'
+
 # cdr
 autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -14,3 +16,7 @@ bindkey '^f' peco-cdr
 bindkey '^]' peco-ghq-list-cd
 bindkey '^t' peco-tree-vim
 bindkey '^g' peco-tree-cd
+
+bindkey '^q' peco-jira-co
+bindkey '^n' peco-gh-new
+bindkey '^w' peco-jira-browser

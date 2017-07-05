@@ -1,9 +1,18 @@
 [user]
-name = studio3104
-email = studio3104.com@gmail.com
+  name = studio3104
+  email = studio3104.com@gmail.com
+
 [core]
-excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
+
 [color]
-diff = auto
+  diff = always
+  diff-highlight = always
+
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
+
 [ghq]
-root = ~/src
+  root = ~/src

@@ -22,6 +22,7 @@ fi
 
 alias ip=~/.pyenv/shims/ipython
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN || -z "${TMPDIR}" ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
