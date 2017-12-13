@@ -8,10 +8,7 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN || -z "${TMPDIR}" ) && -s "${ZDOTDIR:-$HOME
 fi
 
 # rbenv
-if [ -d ${HOME}/.rbenv  ] ; then
-  export PATH="${HOME}/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
-  eval "$(rbenv init -)"
-fi
+eval "$(rbenv init -)"
 
 # pyenv
 if [ -d ${HOME}/.pyenv  ] ; then
@@ -28,3 +25,4 @@ if [ -d /usr/local/opt/go/libexec ] ; then
 fi
 
 source ~/.aliases
+export EDITOR=/usr/local/bin/vim

@@ -8,6 +8,7 @@
 *.so
 *.pyc
 .coverage
+.cache
 
 # Packages #
 ############
@@ -53,3 +54,4 @@ Thumbs.db
 
 # intelliJ
 *.iml
+.idea
