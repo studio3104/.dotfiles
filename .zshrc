@@ -5,6 +5,13 @@ fi
 
 export LESS='-iMR'
 
+function cd {
+    builtin cd "$@"
+    if [ -f "Pipfile" ] ; then
+        pipenv shell
+    fi
+}
+
 # cdr
 autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
