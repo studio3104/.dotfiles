@@ -8,7 +8,8 @@ export LESS='-iMR'
 function cd {
     builtin cd "$@"
     if [ -f "Pipfile" ] ; then
-        pipenv shell
+        BUFFER='export MYPYPATH=`python -c "import sys; print(sys.path[-1])"`'
+        pipenv shell -- ${BUFFER}
     fi
 }
 
