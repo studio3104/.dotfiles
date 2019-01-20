@@ -1,0 +1,72 @@
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+  let g:ale_python_mypy_options = '--follow-imports=skip --disallow-untyped-defs --disallow-untyped-calls'
+  let g:ale_sign_column_always = 1
+  let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+  let g:lightline = {
+    \'active': {
+    \  'left': [
+    \    ['mode', 'paste'],
+    \    ['readonly', 'filename', 'modified', 'ale'],
+    \  ]
+    \},
+    \'component_function': {
+    \  'ale': 'ALEGetStatusLine'
+    \}
+  \}
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  set laststatus=2
+  set noshowmode
+  let g:lightline = {
+    \'colorscheme': 'wombat',
+  \}
+'''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'jamessan/vim-gnupg'
+
+[[plugins]]
+repo = 'dracula/vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+hook_add = '''
+  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
+  imap <c-space> <Plug>(asyncomplete_force_refresh)
+
+  let g:asyncomplete_remove_duplicates = 1
+
+  let g:asyncomplete_auto_popup = 0
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction
+  inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ asyncomplete#force_refresh()
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+'''
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-python'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
