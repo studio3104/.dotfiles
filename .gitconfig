@@ -9,6 +9,7 @@
 [color]
   diff = always
   diff-highlight = always
+	ui = true
 
 [pager]
   log = diff-highlight | less
@@ -20,3 +21,5 @@
 
 [ghq]
   root = ~/src
+[credential]
+	UseHttpPath = true
