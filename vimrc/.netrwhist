@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/private/tmp'
-let g:netrw_dirhist_2='/Users/satsuz/src/LakeUnion/userServer/chalicelib/models'
-let g:netrw_dirhist_3='/Users/satsuz/src/pptx_converter/.git'
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/satsuz/src/protoryping-assets/java-aws-tiny-example/provisioning'
+let g:netrw_dirhist_4='/Users/satsuz/src/protoryping-assets/python-rapid-prototyping/provisioning/cdk.out'
+let g:netrw_dirhist_3='/Users/satsuz/src/leetcode/python/tests'
+let g:netrw_dirhist_2='/Users/satsuz/.dotfiles/vimrc/rc'
+let g:netrw_dirhist_1='/private/tmp/hoge'

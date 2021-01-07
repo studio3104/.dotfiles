@@ -4,3 +4,5 @@ oh-my-fish/plugin-peco
 oshiori/fish-peco_select_ghq_repository
 yoshiori/fish-peco_select_ghq_repository
 sentriz/fish-pipenv
+ryoppippi/fish-poetry
+reitzig/sdkman-for-fish@v1.4.0
